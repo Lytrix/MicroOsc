@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 1,
+			"minor" : 1,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1024.0, 299.0, 742.0, 621.0 ],
+		"rect" : [ 736.0, 299.0, 742.0, 621.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -109,7 +109,6 @@
 					"enablevscroll" : 0,
 					"id" : "obj-36",
 					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -119,14 +118,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 1,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 247.0, 131.0, 1151.0, 877.0 ],
+						"rect" : [ 243.0, 121.0, 1151.0, 722.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -155,6 +154,18 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 197.0, 604.0, 69.0, 22.0 ],
+									"text" : "route 13 10"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Ableton Sans Bold Regular",
 									"fontsize" : 10.0,
@@ -202,7 +213,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 0.0, 70.0, 17.0 ],
 									"text" : "Serial (*)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -217,11 +227,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 65.154784999999947, 97.0, 33.0, 28.0 ],
+									"patching_rect" : [ 65.154784999999947, 97.0, 34.0, 28.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 88.0, 70.0, 17.0 ],
 									"text" : "Serial (*)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -369,7 +378,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 256.0, 608.0, 15.0, 15.0 ],
+									"patching_rect" : [ 259.0, 685.0, 15.0, 15.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 5.0, 63.5, 15.0, 15.0 ],
 									"saved_attribute_attributes" : 									{
@@ -493,7 +502,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
-									"patching_rect" : [ 207.75, 570.0, 29.5, 22.0 ],
+									"patching_rect" : [ 210.75, 647.0, 29.5, 22.0 ],
 									"text" : "t l b"
 								}
 
@@ -741,7 +750,7 @@
 								"box" : 								{
 									"allowdrag" : 0,
 									"id" : "obj-19",
-									"items" : [ "(serial", "port)", ",", "COM3" ],
+									"items" : [ "(serial", "port)", ",", "Bluetooth-Incoming-Port", ",", "usbmodem147284301" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -880,7 +889,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-42", 0 ],
+									"destination" : [ "obj-26", 0 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -1022,6 +1031,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-22", 0 ],
 									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"source" : [ "obj-26", 2 ]
 								}
 
 							}
@@ -1277,7 +1293,6 @@
 					"enablevscroll" : 0,
 					"id" : "obj-14",
 					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -1287,8 +1302,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 1,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1416,10 +1431,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 34.0 ],
+									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ -0.5, 17.0, 247.0, 34.0 ],
+									"presentation_rect" : [ -0.5, 17.0, 247.0, 33.0 ],
 									"text" : "INSTALL CNMAT PACKAGE AND REOPEN PATCHER",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"textjustification" : 1
@@ -1437,8 +1452,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 5,
-											"revision" : 1,
+											"minor" : 1,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1574,7 +1589,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 0.0, 70.0, 17.0 ],
 									"text" : "Serial (SLIP)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -1765,7 +1779,6 @@
 					"enablevscroll" : 0,
 					"id" : "obj-3",
 					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -1775,8 +1788,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 1,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1904,10 +1917,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 34.0 ],
+									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ -0.5, 17.0, 247.0, 34.0 ],
+									"presentation_rect" : [ -0.5, 17.0, 247.0, 33.0 ],
 									"text" : "INSTALL CNMAT PACKAGE AND REOPEN PATCHER",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"textjustification" : 1
@@ -1925,8 +1938,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 5,
-											"revision" : 1,
+											"minor" : 1,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2146,7 +2159,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 51.0, 70.0, 17.0 ],
 									"text" : "Serial (SLIP)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -2384,7 +2396,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 304.0, 283.0, 179.0, 43.0 ],
+					"patching_rect" : [ 304.0, 283.0, 179.0, 42.0 ],
 					"text" : "Don't forget to set the proper baud and port.",
 					"textcolor" : [ 0.792156862745098, 0.0, 0.0, 1.0 ]
 				}
@@ -2482,12 +2494,12 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "OpenSoundControl.mxe64",
-				"type" : "mx64"
+				"name" : "slipOSC.mxo",
+				"type" : "iLaX"
 			}
 , 			{
-				"name" : "slipOSC.mxe64",
-				"type" : "mx64"
+				"name" : "OpenSoundControl.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0,

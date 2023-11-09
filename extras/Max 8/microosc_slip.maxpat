@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 1,
+			"minor" : 1,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 771.0, 299.0, 742.0, 621.0 ],
+		"rect" : [ 736.0, 299.0, 742.0, 621.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -48,7 +48,6 @@
 					"enablevscroll" : 0,
 					"id" : "obj-36",
 					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -58,14 +57,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 1,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 247.0, 131.0, 1151.0, 877.0 ],
+						"rect" : [ 206.0, 176.0, 1151.0, 611.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -94,6 +93,71 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-26",
+									"maxclass" : "newobj",
+									"numinlets" : 3,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 197.0, 604.0, 69.0, 22.0 ],
+									"text" : "route 13 10"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-63",
+									"ignoreclick" : 1,
+									"maxclass" : "live.button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 259.0, 685.0, 15.0, 15.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 50.0, 108.5, 15.0, 15.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_enum" : [ "off", "on" ],
+											"parameter_longname" : "live.button",
+											"parameter_mmax" : 1,
+											"parameter_shortname" : "live.button",
+											"parameter_type" : 2
+										}
+
+									}
+,
+									"varname" : "live.button[1]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-42",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"patching_rect" : [ 210.75, 647.0, 29.5, 22.0 ],
+									"text" : "t l b"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-4",
+									"index" : 1,
+									"maxclass" : "outlet",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 166.0, 694.0, 25.0, 25.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Ableton Sans Bold Regular",
 									"fontsize" : 10.0,
@@ -141,7 +205,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 0.0, 70.0, 17.0 ],
 									"text" : "Serial (*)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -156,11 +219,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 65.154784999999947, 97.0, 33.0, 28.0 ],
+									"patching_rect" : [ 65.154784999999947, 97.0, 34.0, 28.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 88.0, 70.0, 17.0 ],
 									"text" : "Serial (*)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -173,7 +235,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 322.5, 703.0, 57.0, 22.0 ],
-									"restore" : [ 1 ],
+									"restore" : [ 0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
 										"parameter_mappable" : 0
@@ -234,6 +296,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-67",
+									"ignoreclick" : 1,
 									"maxclass" : "live.text",
 									"numinlets" : 1,
 									"numoutlets" : 2,
@@ -295,33 +358,6 @@
 									}
 ,
 									"varname" : "live.button"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-63",
-									"ignoreclick" : 1,
-									"maxclass" : "live.button",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 256.0, 608.0, 15.0, 15.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 5.0, 63.5, 15.0, 15.0 ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_enum" : [ "off", "on" ],
-											"parameter_longname" : "live.button",
-											"parameter_mmax" : 1,
-											"parameter_shortname" : "live.button",
-											"parameter_type" : 2
-										}
-
-									}
-,
-									"varname" : "live.button[1]"
 								}
 
 							}
@@ -419,20 +455,6 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 500.5, 75.0, 457.0, 22.0 ],
 									"text" : "route baud port"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-42",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "bang" ],
-									"patching_rect" : [ 207.75, 570.0, 29.5, 22.0 ],
-									"text" : "t l b"
 								}
 
 							}
@@ -637,18 +659,6 @@
 							}
 , 							{
 								"box" : 								{
-									"comment" : "",
-									"id" : "obj-4",
-									"index" : 1,
-									"maxclass" : "outlet",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 166.0, 694.0, 25.0, 25.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-28",
@@ -679,7 +689,7 @@
 								"box" : 								{
 									"allowdrag" : 0,
 									"id" : "obj-19",
-									"items" : [ "(serial", "port)", ",", "COM3" ],
+									"items" : [ "(serial", "port)", ",", "Bluetooth-Incoming-Port", ",", "usbmodem147284301" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -818,7 +828,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-42", 0 ],
+									"destination" : [ "obj-26", 0 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -960,6 +970,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-22", 0 ],
 									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-42", 0 ],
+									"source" : [ "obj-26", 2 ]
 								}
 
 							}
@@ -1215,7 +1232,6 @@
 					"enablevscroll" : 0,
 					"id" : "obj-14",
 					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -1225,8 +1241,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 1,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1354,10 +1370,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 34.0 ],
+									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ -0.5, 17.0, 247.0, 34.0 ],
+									"presentation_rect" : [ -0.5, 17.0, 247.0, 33.0 ],
 									"text" : "INSTALL CNMAT PACKAGE AND REOPEN PATCHER",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"textjustification" : 1
@@ -1375,8 +1391,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 5,
-											"revision" : 1,
+											"minor" : 1,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1512,7 +1528,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 0.0, 70.0, 17.0 ],
 									"text" : "Serial (SLIP)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -1703,7 +1718,6 @@
 					"enablevscroll" : 0,
 					"id" : "obj-3",
 					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -1713,8 +1727,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 1,
+							"minor" : 1,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1842,10 +1856,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 34.0 ],
+									"patching_rect" : [ 797.0, 283.726723360343954, 198.0, 33.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
-									"presentation_rect" : [ -0.5, 17.0, 243.0, 34.0 ],
+									"presentation_rect" : [ -0.5, 17.0, 247.0, 33.0 ],
 									"text" : "INSTALL CNMAT PACKAGE AND REOPEN PATCHER",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"textjustification" : 1
@@ -1863,8 +1877,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 8,
-											"minor" : 5,
-											"revision" : 1,
+											"minor" : 1,
+											"revision" : 11,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2084,7 +2098,6 @@
 									"presentation" : 1,
 									"presentation_rect" : [ -0.5, 51.0, 70.0, 17.0 ],
 									"text" : "Serial (SLIP)",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 1
 								}
 
@@ -2369,7 +2382,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 304.0, 283.0, 179.0, 43.0 ],
+					"patching_rect" : [ 304.0, 283.0, 179.0, 42.0 ],
 					"text" : "Don't forget to set the proper baud and port.",
 					"textcolor" : [ 0.792156862745098, 0.0, 0.0, 1.0 ]
 				}
@@ -2406,13 +2419,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-36", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-7", 0 ]
 				}
@@ -2439,12 +2445,12 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "OpenSoundControl.mxe64",
-				"type" : "mx64"
+				"name" : "slipOSC.mxo",
+				"type" : "iLaX"
 			}
 , 			{
-				"name" : "slipOSC.mxe64",
-				"type" : "mx64"
+				"name" : "OpenSoundControl.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0,
